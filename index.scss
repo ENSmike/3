@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@font-face {
+    font-family: KaushanScript-Regular;
+    src: url(fonts/KaushanScript-Regular.ttf);
+  }
+body {
+    padding:0px;
+    margin:0px;
+    background:linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("images/2.jpg") center center;
+    background-size:cover;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+ 
+@keyframes rotate {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+#box {
+    width:100vw;
+    height:100vh;
+    z-index:9;
+    position:fixed;
+    top:0;
+}
+#box div {
+    width:16.66vw;
+    height:100%;
+    display:inline-block;
+}
+#menu {
+    width:100%;
+    text-align:center;
+    margin:6vh 0px;
+    display:none;
+}
+#menu a {
+    margin:0px 6%;
+    font-size:19px;
+    color:#fff;
+    text-decoration:underline;
+}
+
+.word span {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 23px;
+    -webkit-user-select: none;
+            user-select: none;
+    line-height: .2;
+    margin-top: 30px;
+  }
+  
+  .word span:nth-child(1).active {
+    animation: balance 2s ease-out;
+    transform-origin: bottom left;
+  }
+  
+  @keyframes balance {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    30%, 60% {
+      transform: rotate(-45deg);
+    }
+  }
+  
+  .word span:nth-child(2).active {
+    animation: shrinkjump 2s ease-in-out;
+    transform-origin: bottom center;
+  }
+  
+  @keyframes shrinkjump {
+    10%, 35% {
+      transform: scale(2, 0.2) translate(0, 0);
+    }
+    45%, 50% {
+      transform: scale(1) translate(0, -150px);
+    }
+    80% {
+      transform: scale(1) translate(0, 0);
+    }
+  }
+  
+  .word span:nth-child(3).active {
+    animation: falling 2s ease-out;
+    transform-origin: bottom center;
+  }
+  
+  @keyframes falling {
+    12% {
+      transform: rotateX(240deg);
+    }
+    24% {
+      transform: rotateX(150deg);
+    }
+    36% {
+      transform: rotateX(200deg);
+    }
+    48% {
+      transform: rotateX(175deg);
+    }
+    60%, 85% {
+      transform: rotateX(180deg);
+    }
+    100% {
+      transform: rotateX(0deg);
+    }
+  }
+  
+  .word span:nth-child(4).active {
+    animation: rotate 2s ease-out;
+  }
+  
+  .word span:nth-child(5).active {
+    animation: toplong 1.5s linear;
+  }
+  
+  .word span:nth-child(6).active {
+    animation: rotate 1s ease-out;
+  }
+  
+  .word span:nth-child(7).active {
+    animation: toplong 1.5s linear;
+  }
+  
+  .word span:nth-child(8).active {
+    animation: rotate 1s ease-out;
+  }
+  
+  .word span:nth-child(9).active {
+    animation: toplong 1.5s linear;
+  }
+  
+  .word span:nth-child(10).active {
+    animation: rotate 2s ease-out;
+  }
+  
+  .word span:nth-child(11).active {
+    animation: toplong 1.5s linear;
+  }
+  
+  .word span:nth-child(12).active {
+    animation: rotate 2s ease-out;
+  }
+  
+  .word span:nth-child(13).active {
+    animation: toplong 1.5s linear;
+  }
+  
+  .word span:nth-child(14).active {
+    animation: falling 2s ease-out;
+    transform-origin: bottom center;
+  }
+  
+  @keyframes toplong {
+    10%, 40% {
+      transform: translateY(-48vh) scaleY(1);
+    }
+    90% {
+      transform: translateY(-48vh) scaleY(4);
+    }
+  }
+#middle {
+    width:100vw;
+    height:90vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    position:fixed;
+    top:0;
+    text-align:center;
+    z-index:1;
+    color:#fff;
+    padding-bottom:10vh;
+    top:10%;
+}
+#middle img {
+    border-radius: 50%;
+    width: 200px;
+    height:200px;
+    left:50%;
+   
+}
+#middle h1 span{
+    color:rgb(226, 202, 62);
+    font-size:70px;
+}
+#about {
+    width:10vw;
+    height:10vw;
+    text-align:center;
+    font-size:25px;
+    transform:rotate(-90deg);
+    background:transparent;
+    color:#fff;
+    position:fixed;
+    left:0;
+    bottom:40vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    z-index:4;
+    transition:0.4s ease-in-out;
+    border-radius:0px 0px 100px 100px;
+}
+#skill {
+    width:10vw;
+    height:10vw;
+    text-align:center;
+    font-size:25px;
+    transform:rotate(90deg);
+    background:transparent;
+    color:#fff;
+    position:fixed;
+    right:0;
+    bottom:40vh;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    z-index:4;
+    transition:0.4s ease-in-out;
+    border-radius:0px 0px 100px 100px;
+}
+
+#about:hover {
+    background:rgb(226, 202, 62);
+    cursor:pointer;
+}
+#skill:hover {
+    background:rgb(226, 202, 62);
+    cursor:pointer;
+}
+
+#middle table {
+    width:30%;
+    margin:6vh auto;
+}
+#middle table tr td {
+    text-align:center;
+}
+.social {
+    color:#fff;
+    font-size:25px;
+    border-radius:50%;
+    transition:0.4s ease-in-out;
+    margin:0px 8px;
+    text-align:center;
+}
+.social:hover { 
+    cursor: pointer;
+    color:rgb(199, 178, 58);
+}
+.container {
+    width:100vw;
+    height:90vh;
+    padding:5vh 5vw;
+    background:linear-gradient(0deg,rgba(199, 178, 58, 1),rgba(5, 5, 3, 1));
+    color:#fff;
+    z-index:9;
+    position:fixed;
+    max-height:100vh;
+    overflow-y:auto;
+    display:none;
+}
+.container div {
+    font-size:25px;
+    margin:20px 0px;
+    transition:0.4s ease-in-out;
+}
+.container div:hover {
+    cursor:pointer;
+}
+.container section {
+    margin:8vh 0px;
+}
+#used div{
+    font-size:14px !important;
+    display:inline-block;
+    padding:8px 10px;
+    border:2px solid #fff;
+    margin:0px 10px;
+    border-radius:50px;
+}
+#used:hover {
+    cursor:text;
+}
+#used div:hover {
+    cursor:text;
+}
+.container h1 {
+    font-size:60px;
+    text-decoration:underline;
+}
+.container p {
+    font-size:21px;
+}
+ 
+
+ 
+/* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.skillbar {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+}
+
+.html {width: 85%; background-color: #308532;} /* Green */
+.css {width: 85%; background-color: #1168af;} /* Blue */
+.js {width: 40%; background-color: #e05036;} /* Red */
+.eng {width: 55%; background-color: #494949;} /* Dark Grey */
+ 
+::placeholder {
+    color:#fff;
+}
+#footer {
+    color:#fff;
+    width:100vw;
+    padding:2vw;
+    text-align: center;
+    position:fixed;
+    z-index:1;
+    bottom:0;
+    font-size:16px;
+    font-weight:bold;
+    font-family: KaushanScript-Regular;
+}
+#footer a {
+    color:rgb(226, 202, 62);
+}
+#particles-js {
+    position:fixed;
+    width:100vw;
+    height:100vh;
+}
+::-webkit-scrollbar {
+    width:5px;
+    height:5px;
+}
+::-webkit-scrollbar-track {
+    background: #fff; 
+}
+::-webkit-scrollbar-thumb {
+    background: rgb(7, 5, 5); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.8); 
+}
+::selection {
+	color: #fff;
+	background: rgb(255, 50, 50);
+}
+
+@media (max-width: 800px){ 
+    #about {
+        display:none;
+    }
+    #skill { 
+        display:none;
+    }
+     
+    #footer {
+        text-align:center;
+    }
+    #middle {
+        width:90vw;
+        padding:0px 5vw;
+       top:0;
+        left: calc(100% - 50% - 45vw);
+    }
+    #middle table {
+        width:80%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #middle h1 {
+        font-size: 25pt;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #middle img {
+        width: 150px;
+        height: 150px;
+        
+    }
+    #menu {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    #middle h2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .container h1 {
+        font-size: 25pt;
+    }
+    #used {
+        display: none;
+    }
+    #menu {
+        display:inline-block;
+    }
+    #onlywide {
+        display:none !important;
+    }
+    .box2 {
+        margin-left:0px !important;
+    }
+    #box div {
+        width:100%;
+    }
+}
